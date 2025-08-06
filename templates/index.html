@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Emotion Recognition</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎙️ Speech Emotion Recognition</h1>
+      <p class="subtitle">
+        Upload a short audio clip (.wav) to detect the underlying emotion
+      </p>
+
+      <form method="post" enctype="multipart/form-data">
+        <input type="file" name="audio" accept=".wav" required />
+        <button type="submit">Predict Emotion</button>
+      </form>
+
+      {% if prediction %}
+      <div class="result-card">
+        <h2>
+          Predicted Emotion: <span class="emotion-badge">{{ prediction }}</span>
+        </h2>
+        <h3>Emotion Probabilities:</h3>
+        <ul class="probability-list">
+          {% for emotion, score in scores.items() %}
+          <li>
+            <span class="emotion">{{ emotion }}</span>
+            <span class="score">{{ score }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
