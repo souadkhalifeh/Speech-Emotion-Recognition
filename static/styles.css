@@ -1,0 +1,91 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f7fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: #2c3e50;
+}
+
+.subtitle {
+  color: #6c757d;
+  margin-bottom: 25px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f51b5;
+}
+
+.result-card {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9fcff;
+  border-radius: 12px;
+  border: 1px solid #dfe8f1;
+}
+
+.emotion-badge {
+  background-color: #3f51b5;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.probability-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.probability-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.emotion {
+  font-weight: 600;
+}
+
+.score {
+  font-family: monospace;
+  color: #333;
+}
